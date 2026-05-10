@@ -1,5 +1,5 @@
 import Logo from "../components/Logo/Logo.jsx";
-import { part } from "../components/Logo/sizeObject.js";
+import { part } from "../components/Logo/partLogo.js";
 
 function Login() {
   return (
@@ -12,6 +12,8 @@ function Login() {
           valueContainer={part.containerLoginRegister}
           valueChill={part.chillLoginRegister}
           valueClip={part.clipLoginRegister}
+          clipImg={part.clipLoginRegisterImg}
+          chillImg={part.chillLoginRegisterImg}
         />
       </div>
     </div>
