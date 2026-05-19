@@ -1,3 +1,4 @@
+import Form from "../components/Form/Form.jsx";
 import Logo from "../components/Logo/Logo.jsx";
 import { part } from "../components/Logo/partLogo.js";
 
@@ -15,6 +16,7 @@ function Login() {
           clipImg={part.clipLoginRegisterImg}
           chillImg={part.chillLoginRegisterImg}
         />
+        <Form />
       </div>
     </div>
   );
