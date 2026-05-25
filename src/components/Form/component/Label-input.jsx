@@ -3,9 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
 import vectorImg from "../../../assets/Vector.png";
 
-export default function LabelInput({ valueLabel, value }) {
+export default function LabelInput({ valueLabel, value, piece }) {
   const [isActive, setIsActive] = useState(false);
-
   function Type() {
     if (value === "text") {
       return "text";
@@ -15,7 +14,10 @@ export default function LabelInput({ valueLabel, value }) {
   }
 
   return (
-    <div className="flex flex-col gap-[6px] px-6 relative m-9">
+    <div
+      className={`flex flex-col gap-[6px] px-6 relative ${piece}
+`}
+    >
       <label
         htmlFor={Type()}
         className="font-medium text-white max-sm:text-[10px] text-base"

@@ -18,4 +18,3 @@ export const part = {
     chillBerandaImg: `${ chillBerandaImg }`,
 
 };
-console.log( part.clipLoginRegisterImg );

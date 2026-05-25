@@ -3,8 +3,7 @@ import Logo from "../components/Logo/Logo.jsx";
 import { part } from "../components/Logo/partLogo.js";
 import Title from "../components/Title-form/Title.jsx";
 import { size, sizeButton, sizeLink } from "./sizeKind.js";
-
-function Login() {
+function Register() {
   return (
     <div className="bg-[url(./src/assets/background.jpg)] grid place-content-center max-sm:px-4 bg-cover overflow-hidden h-screen bg-center bg-no-repeat relative">
       <div
@@ -18,16 +17,15 @@ function Login() {
           clipImg={part.clipLoginRegisterImg}
           chillImg={part.chillLoginRegisterImg}
         />
-        <Title title={"Masuk"} dectitle={"Selamat datang kembali!"} />
+        <Title title={"Daftar"} dectitle={"Selamat datang!"} />
         <Form
-          type={"Daftar"}
-          piece={size.Login}
-          linksize={sizeLink.Login}
-          sizeButton={sizeButton.Login}
+          type={"Masuk"}
+          piece={size.Register}
+          linksize={sizeLink.Register}
+          sizeButton={sizeButton.Register}
         />
       </div>
     </div>
   );
 }
-
-export default Login;
+export default Register;
