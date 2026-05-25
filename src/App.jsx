@@ -5,7 +5,7 @@ import Register from "./Pages/Register.jsx";
 function App() {
   return (
     <>
-      <Register />
+      <Login />
     </>
   );
 }
