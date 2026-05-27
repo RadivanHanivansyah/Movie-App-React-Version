@@ -1,1 +1,20 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+@theme {
+  --font-lato: "Lato", sans-serif;
+}
+
+@layer components {
+  .material-symbols-outlined {
+    font-variation-settings: "FILL" 0 "wght" 400, "GRAD" 0, "opsz" 24;
+  }
+
+  .title-main-content {
+    color: var(--color-white);
+    font-weight: var(--font-weight-bold);
+    font-family: "Lato", sans-serif;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+}
