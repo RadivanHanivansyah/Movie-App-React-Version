@@ -1,5 +1,6 @@
 import image_home from "../../assets/main image home.png";
 import mute from "../../assets/mute.png";
+import { dataImage } from "../dataFilm";
 export default function MainFilmPage() {
   return (
     <section className="main-view-film relative">
