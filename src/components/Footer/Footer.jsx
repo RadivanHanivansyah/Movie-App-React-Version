@@ -1,5 +1,21 @@
 import logoFooter from "../../assets/Logo footer.png";
 export default function Footer() {
+  const genres = [
+    "Aksi",
+    "Drama",
+    "Komedi",
+    "Sains & Alam",
+    "Anak-anak",
+    "Fantasi ilmiah & Fantasi",
+    "Petualangan",
+    "Thriller",
+    "Anime",
+    "Kejahatan",
+    "Perang",
+    "Britania",
+    "KDrama",
+    "Romantis",
+  ];
   return (
     <footer class="mt-20 px-20 py-[60px] max-sm:px-5 max-sm:py-5 flex justify-between max-sm:flex-col max-sm:gap-10">
       <header class="logo-footer max-sm:w-80 max-sm:h-14">
@@ -18,20 +34,9 @@ export default function Footer() {
             Genre
           </h1>
           <ul class="grid grid-cols-4 grid-rows-4 max-sm:hidden font-lato font-medium text-base text-[#C1C2C4]">
-            <li>Aksi</li>
-            <li>Drama</li>
-            <li>Komedi</li>
-            <li>Sains & Alam</li>
-            <li>Anak-anak</li>
-            <li>Fantasi Ilmiah & Fantasi</li>
-            <li>Petualangan</li>
-            <li>Thriller</li>
-            <li>Anime</li>
-            <li>Kejahatan</li>
-            <li>Perang</li>
-            <li>Britania</li>
-            <li>KDrama</li>
-            <li>Romantis</li>
+            {genres.map((item, index) => {
+              return <li key={index}>{item}</li>;
+            })}
           </ul>
           <span class="arrow text-white text-xs sm:hidden">&#11166;</span>
         </div>
