@@ -6,8 +6,8 @@ import Footer from "../components/Footer/Footer.jsx";
 
 function Beranda() {
   return (
-    <body className="overflow-x-hidden ">
-      <div className="container-box bg-[#181A1C] w-[1440px] max-sm:w-[360px] max-sm:min-h-screen">
+    <body className="overflow-x-hidden w-[1440px] max-sm:w-[360px]">
+      <div className="container-box bg-[#181A1C] max-sm:min-h-screen">
         <Navbar />
         <MainFilmPage />
         <main className="main-content">

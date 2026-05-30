@@ -6,7 +6,7 @@ import Beranda from "./Pages/Beranda.jsx";
 function App() {
   return (
     <>
-      <Beranda />
+      <Register />
     </>
   );
 }
