@@ -1,24 +1,25 @@
 import movie1 from "../../assets/admin movie 2.jpg";
-export default function Card() {
+export default function Card({ judul, gambar, tahun, rating, handleEdit }) {
   const name = "a";
   return (
     <div className="card max-sm:w-full border rounded-sm pb-2 max-sm:pb-0 sm:w-[320px] sm:h-auto max-sm:flex max-sm:gap-x-2">
-      <img src={movie1} className="aspect-video max-sm:w-1/2" />
-      <div className="max-sm:flex max-sm:items-center max-sm:justify-between max-sm:gap-4">
+      <img src={gambar} className="aspect-video max-sm:w-1/2" />
+      <div className="max-sm:flex max-sm:items-center max-sm:justify-around max-sm:gap-0.5">
         <div className="detail mt-1 sm:mt-3 sm:ml-1.5 max-sm:w-[65%]">
-          <h1 className="Title">The Dark Night</h1>
-          <h3 className="Year">{`Year :`}</h3>
-          <h4>9.0</h4>
+          <h1 className="Title">{judul}</h1>
+          <h3 className="Year">{`Year :${tahun}`}</h3>
+          <h4>{`rating:${rating}`}</h4>
         </div>
-        <div className="button flex justify-around font-lato text-lg sm:mt-2 max-sm:w-[35%] max-sm:gap-1 ">
-          <button className="border px-2 py-1 w-1/3 max-sm:h-fit max-sm:w-fit max-sm:px-1.5 max-sm:py-1.5 rounded-md  hover:cursor-pointer">
+        <div className="button flex justify-around font-lato text-lg sm:mt-2 max-sm:w-[35%] max-sm:gap-1 max-sm:mr-1 ">
+          <button
+            className="border px-2 py-1 w-1/3 max-sm:h-fit max-sm:w-fit max-sm:px-1.5 max-sm:py-1.5 rounded-md  hover:cursor-pointer"
+            onClick={handleEdit}
+          >
             <span className="max-sm:hidden">Edit</span>
             <img
-              width="15"
-              height="15"
               src="https://img.icons8.com/ios/50/create-new.png"
               alt="create-new"
-              className="sm:hidden"
+              className="sm:hidden max-sm:w-20 max-sm:h-auto"
             />
           </button>
           <button className="border px-2 py-1 w-1/3 max-sm:h-fit max-sm:w-fit max-sm:px-1.5 sm:border-red-400 rounded-md hover:cursor-pointer">
@@ -27,10 +28,8 @@ export default function Card() {
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
               y="0px"
-              width="16"
-              height="16"
               viewBox="0 0 100 100"
-              className="sm:hidden"
+              className="sm:hidden w-[1.2rem] h-auto"
             >
               <path
                 fill="#f37e98"
