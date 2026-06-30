@@ -6,6 +6,9 @@ import imgAdmin3 from "../assets/admin movie 3.png";
 import imgAdmin4 from "../assets/admin movie 4.jpg";
 import imgAdmin5 from "../assets/admin movie 5.jpg";
 import imgAdmin6 from "../assets/admin movie 8.jpg";
+import ModalEdit from "../components/Modal/ModalEdit";
+import { useState } from "react";
+import { use } from "react";
 
 const dataMovie = [
   {
@@ -52,16 +55,24 @@ const dataMovie = [
   },
 ];
 
-function handleEdit(item) {
-  console.log(item);
-}
 export default function Admin() {
+  const [movies, setMovies] = useState(dataMovie);
+  const [isModalEditOpen, setIsModalEditOpen] = useState(false);
+  const [ModalDeleteOpen, setIsModalDeleteOpen] = useState(false);
+  const [isModalCloseOpen, setIsModalCloseOpen] = useState(false);
+  const [selectedMovie, setSelectedMovie] = useState();
+
+  function handleEdit(item) {
+    setIsModalEditOpen(true);
+    setSelectedMovie(item);
+    console.log(isModalEditOpen);
+  }
   return (
     <div className="bg-slate-200 w-full flex justify-center">
       <div className="border border-slate-400 rounded-xl py-4 px-4 w-3/4 max-sm:w-[90%]">
         <HeaderAdmin />
         <div className="flex flex-wrap justify-center gap-x-2 gap-y-4">
-          {dataMovie.map((item, index) => {
+          {movies.map((item, index) => {
             return (
               <Card
                 key={index}
@@ -69,11 +80,15 @@ export default function Admin() {
                 gambar={item.gambar}
                 tahun={item.tahun}
                 rating={item.rating}
-                handleEdit={() => handleEdit(item)}
+                handleEdit={() => {
+                  handleEdit(item);
+                }}
+                handleDelete={() => handleDelete(item)}
               />
             );
           })}
         </div>
+        {isModalEditOpen ? <ModalEdit /> : ""}
       </div>
     </div>
   );

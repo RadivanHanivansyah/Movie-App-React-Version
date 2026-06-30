@@ -1,6 +1,12 @@
 import movie1 from "../../assets/admin movie 2.jpg";
-export default function Card({ judul, gambar, tahun, rating, handleEdit }) {
-  const name = "a";
+export default function Card({
+  judul,
+  gambar,
+  tahun,
+  rating,
+  handleEdit,
+  handleDelete,
+}) {
   return (
     <div className="card max-sm:w-full border rounded-sm pb-2 max-sm:pb-0 sm:w-[320px] sm:h-auto max-sm:flex max-sm:gap-x-2">
       <img src={gambar} className="aspect-video max-sm:w-1/2" />
@@ -22,7 +28,10 @@ export default function Card({ judul, gambar, tahun, rating, handleEdit }) {
               className="sm:hidden max-sm:w-20 max-sm:h-auto"
             />
           </button>
-          <button className="border px-2 py-1 w-1/3 max-sm:h-fit max-sm:w-fit max-sm:px-1.5 sm:border-red-400 rounded-md hover:cursor-pointer">
+          <button
+            className="border px-2 py-1 w-1/3 max-sm:h-fit max-sm:w-fit max-sm:px-1.5 sm:border-red-400 rounded-md hover:cursor-pointer"
+            onClick={handleDelete}
+          >
             <span className="max-sm:hidden font-bold text-red-500">Delete</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
